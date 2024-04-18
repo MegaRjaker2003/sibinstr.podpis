@@ -48,7 +48,7 @@ card_logo_generate.addEventListener("change",() => {
             let reader = new FileReader();
             reader.onload = function () {
                 stateObject.card_generate[i] = reader.result.replace("data:", "").replace(/^.+,/,"");
-                document.getElementById("text").insertAdjacentHTML("afterend",'<img src="data:image/jpeg;base64,'+ stateObject.card_generate[i] +'" alt="" class="card">')
+                document.getElementById("text").insertAdjacentHTML("afterend",'<img src="data:image/jpeg;base64,'+ stateObject.card_generate[i] +'" alt="" class="card" style="display: block;margin: 10px 0;box-shadow:7px 7px 5px rgba(0,0,0,0.6);">')
             }
             reader.readAsDataURL(file);  
         }
@@ -87,7 +87,7 @@ function genSot() {
             stateObject.phone_sot = stateObject.phone_sot.substring(0,16)
         }
         if(document.querySelectorAll(".podpis .nb1").length < 2){
-            document.getElementById("tel-p").insertAdjacentHTML("afterend",'<p class="nb1">моб.тел: '+ `<a href="tel:${stateObject.phone_sot.replace(/[\s-]+/g, '')}">${stateObject.phone_sot}<a/>` +'</p>')
+            document.getElementById("tel-p").insertAdjacentHTML("afterend",'<p class="nb1" style="margin:5px 0;padding:0;">моб.тел: '+ `<a href="tel:${stateObject.phone_sot.replace(/[\s-]+/g, '')}">${stateObject.phone_sot}<a/>` +'</p>')
         } else {
             document.querySelectorAll(".podpis .nb1")[1].innerHTML = "моб.тел: " + `<a href="tel:${stateObject.phone_sot.replace(/[\s-]+/g, '')}">${stateObject.phone_sot}<a/>`
         }

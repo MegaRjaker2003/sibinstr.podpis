@@ -36,33 +36,16 @@
     </form>
     <div class="result-block">
         <div class="result" id="result">
-            <style>
-                .podpis {margin: 20px;}
-                .podpis p{margin:5px 0;padding:0;/*font-family:'Times New Roman',sans-serif*/font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;;font-size:17px;font-weight:400}
-                .podpis p.fio{font-size:17px;font-weight: bold;}
-                .podpis img:not(#logo){
-                    display: block;
-                    margin: 10px 0;
-                    box-shadow:7px 7px 5px rgba(0,0,0,0.6);
-                }
-                
-                .podpis img#logo {
-                    display: block;
-                    margin-bottom: 20px;
-                    width:320px;
-                    margin-top: 10px;
-                }
-                </style>
-            <div class="podpis">
-                <p class="prev-suv">С уважением,</p>
-                <P class="fio">ФИО</P>
-                <P class="suv"> Должность</P>
-                <P class="nb1" id="tel-p">раб.тел:</P>
-                <p class="ad1">адрес: г.Иркутск, улица Розы Люксембург, 182/2</p>
-                <P class="nb2">почта:</P>
+            <div class="podpis" style="margin: 20px;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;font-size:17px;font-weight:400">
+                <p class="prev-suv" style="margin:5px 0;padding:0;">С уважением,</p>
+                <P class="fio" style="font-size:17px;font-weight: bold;margin:5px 0;padding:0;">ФИО</P>
+                <P class="suv" style="margin:5px 0;padding:0;"> Должность</P>
+                <P class="nb1" id="tel-p" style="margin:5px 0;padding:0;">раб.тел:</P>
+                <p class="ad1" style="margin:5px 0;padding:0;">адрес: г.Иркутск, улица Розы Люксембург, 182/2</p>
+                <P class="nb2" style="margin:5px 0;padding:0;">почта:</P>
                 <a href="https://kcu.ru" class="nb3" target="_blank">сайт: www.kcu.ru</a>
-                <a href="https://kcu.ru" target="_blank"><img src="" alt="" id="logo"/></a>
-                <p id="text"></p>
+                <a href="https://kcu.ru" target="_blank"><img src="" alt="" id="logo" style="display: block;margin-bottom: 20px;width:320px;margin-top: 10px;"/></a>
+                <p id="text" style="margin:5px 0;padding:0;"></p>
             </div>    
         </div>
         <button class="copy" id="copy">Скопировать</button>
