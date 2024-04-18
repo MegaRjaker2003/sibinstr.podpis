@@ -12,7 +12,10 @@
     <form>
         <input type="text" placeholder="ФИО" id="fio">
         <input type="text" placeholder="Должность" id="dolzn">
-        <input type="tel" placeholder="Рабочий телефон" id="phone_work">
+        <div class="phones">
+            <input type="tel" placeholder="Рабочий телефон" id="phone_work">
+            <input type="tel" placeholder="Добавочный (Необязательно)" id="phone_dop" maxlength="3">
+        </div>
         <select name="address" id="address">
             <option value="664040, г. Иркутск, ул. Розы Люксембург, 182/2" selected>664040, г. Иркутск, ул. Розы Люксембург, 182/2</option>
             <option value="665806, г. Ангарск, Степана Разина, 3">665806, г. Ангарск, Степана Разина, 3</option>
@@ -30,7 +33,6 @@
             <textarea name="" id="text-input" cols="30" rows="10" placeholder="Произвольный текст"></textarea>
             <label for="card_generate">Доп.изображения <input type="file" name="card_generate" id="card_generate" multiple="multiple"></label>
         </div>
-        
     </form>
     <div class="result-block">
         <div class="result" id="result">

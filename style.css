@@ -91,3 +91,15 @@ input[type="file"] {
     color:#2f3128;
     margin-left: 10px;
 }
+
+.phones {
+    display: flex;
+}
+
+#phone_work {
+    width: 70%;
+}
+
+#phone_dop {
+    width: 30%;
+}

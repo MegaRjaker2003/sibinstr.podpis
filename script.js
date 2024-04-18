@@ -1,9 +1,9 @@
 const logo = document.getElementById("logo")
 logo.src = baseLogoSrc
-
 const input_dolzn = document.getElementById("dolzn")
 const input_fio = document.getElementById("fio")
 const input_phone_work = document.getElementById("phone_work")
+const input_phone_dop = document.getElementById("phone_dop")
 const input_phone_sot = document.getElementById("phone_sot")
 const input_work_mail = document.getElementById("work_mail")
 const input_logo_generate = document.getElementById("logo_generate")
@@ -16,6 +16,7 @@ let stateObject = {
     dolzn:"",
     fio:"",
     phone_work:"",
+    phone_dop:"",
     address:input_address.value,
     phone_sot:"",
     work_mail:"",
@@ -24,45 +25,15 @@ let stateObject = {
     text:"",
 }
 
-input_address.addEventListener("change",() => {
-    stateObject.address = input_address.value
-    generatePrevResult()
-})
-
-input_dolzn.addEventListener("input",()=> {
-    stateObject.dolzn = input_dolzn.value
-    generatePrevResult()
-})
-
-input_fio.addEventListener("input",()=> {
-    stateObject.fio = input_fio.value
-    generatePrevResult()
-})
-
-input_phone_work.addEventListener("input",()=> {
-    stateObject.phone_work = input_phone_work.value
-    generatePrevResult()
-})
-
-input_phone_sot.addEventListener("input",()=> {
-    stateObject.phone_sot = input_phone_sot.value
-    generatePrevResult()
-})
-
-input_work_mail.addEventListener("input",()=> {
-    stateObject.work_mail = input_work_mail.value
-    generatePrevResult()
-})
-
-text_input.addEventListener("input",() => {
-    stateObject.text = text_input.value
-    generatePrevResult()
-})
-
-document.getElementById("copy").addEventListener("click", e => {
-    e.preventDefault()
-    e.target.setAttribute("data-clipboard-text", document.getElementById("result").innerHTML)
-})
+input_address.addEventListener("change",() => {stateObject.address = input_address.value;generatePrevResult()})
+input_dolzn.addEventListener("input",()=> {stateObject.dolzn = input_dolzn.value;generatePrevResult()})
+input_fio.addEventListener("input",()=> {stateObject.fio = input_fio.value;generatePrevResult()})
+input_phone_work.addEventListener("input",()=> {stateObject.phone_work = input_phone_work.value;generatePrevResult()})
+input_phone_dop.addEventListener("input",()=>{stateObject.phone_dop = input_phone_dop.value;generatePrevResult()})
+input_phone_sot.addEventListener("input",()=> {stateObject.phone_sot = input_phone_sot.value;generatePrevResult()})
+input_work_mail.addEventListener("input",()=> {stateObject.work_mail = input_work_mail.value;generatePrevResult()})
+text_input.addEventListener("input",() => {stateObject.text = text_input.value;generatePrevResult()})
+document.getElementById("copy").addEventListener("click", e => {e.preventDefault();e.target.setAttribute("data-clipboard-text", document.getElementById("result").innerHTML)})
 
 card_logo_generate.addEventListener("change",() => {
     if(card_logo_generate['files'].length > 0) {
@@ -99,7 +70,7 @@ function generatePrevResult() {
         stateObject.phone_work = stateObject.phone_work.substring(0,17)
     }
     if(stateObject.phone_work == "+7" || stateObject.phone_work == "+7 ") stateObject.phone_work = ""
-    document.querySelectorAll(".podpis .nb1")[0].innerHTML = "раб.тел: " + `<a href="${stateObject.phone_sot.replace(/[\s-]+/g, '')}">${stateObject.phone_work}</a>`
+    document.querySelectorAll(".podpis .nb1")[0].innerHTML = "раб.тел: " + `<a href="${stateObject.phone_sot.replace(/[\s-]+/g, '')}">${stateObject.phone_work}</a>${stateObject.phone_dop.length >= 3 && stateObject.phone_work.length > 16 ? '<span style="margin-left:15px;">доп: '+ stateObject.phone_dop + '</span>' : ""}`
     document.querySelectorAll(".podpis .nb1 a")[0].setAttribute("href","tel:"+ stateObject.phone_work.replace(/[\s-()]+/g, ''))
     genSot()
     document.querySelector(".podpis .ad1").innerHTML = "адрес: " + stateObject.address
