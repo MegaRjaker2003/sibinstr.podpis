@@ -1,0 +1,110 @@
+body {
+    background: url("https://kcu.ru/upload/iblock/180/lg2oet56mh9g4w2pp4bj15455k3twt6p.webp");
+    background-size: cover;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,h2 {
+    font-family: sans-serif;
+    color:white;
+}
+
+form {
+    width: 100%;
+    max-width:1024px; 
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+form input,form select {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 3px 10px;
+}
+
+.result-block {
+    width: 100%;
+    max-width:1024px;
+    margin-bottom: 40px;
+}
+
+.result-block .result {
+    border:1px solid black;
+    background-color: white;
+}
+
+.copy {
+    width: 100%;
+    margin-top: 10px;
+}
+
+label {
+    display: flex;
+    margin-left: 10px;
+}
+
+textarea {
+    margin-bottom: 10px;
+    min-width: 100%;
+    max-width: 100%;
+    background-color: gainsboro;
+    font-size: 1.1em;
+}
+
+input[type="file"] {
+    margin-left: 10px;
+    padding: 0;
+}
+
+.copy {
+    padding: 10px 0;
+    font-size: 1.5em;
+    font-family: sans-serif;
+    border: none;
+    cursor: pointer;
+    background-color: grey;
+    transition:all .5s ease;
+}
+
+.copy:hover {
+    background-color: orange;
+    color:white;
+}
+
+.form-not {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: gainsboro;;
+}
+
+.form-not h2 {
+    color:#2f3128;
+    margin-left: 10px;
+}
+
+.phones {
+    display: flex;
+}
+
+#phone_work {
+    width: 70%;
+}
+
+#phone_dop {
+    width: 30%;
+}

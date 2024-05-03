@@ -1,57 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./images/logo.png" type="image/png">
-    <title>Редактирование подписи</title>
-</head>
-<body>
-    <h1>Создание подписей для почты</h1>
-    <form>
-        <input type="text" placeholder="ФИО" id="fio">
-        <input type="text" placeholder="Должность" id="dolzn">
-        <div class="phones">
-            <input type="tel" placeholder="Рабочий телефон" id="phone_work">
-            <input type="tel" placeholder="Добавочный (Необязательно)" id="phone_dop" maxlength="3">
-        </div>
-        <select name="address" id="address">
-            <option value="664040, г. Иркутск, ул. Розы Люксембург, 182/2" selected>664040, г. Иркутск, ул. Розы Люксембург, 182/2</option>
-            <option value="665806, г. Ангарск, Степана Разина, 3">665806, г. Ангарск, Степана Разина, 3</option>
-            <option value="660079, г. Красноярск, ул. 60 лет Октября, 148ж">660079, г. Красноярск, ул. 60 лет Октября, 148ж</option>
-            <option value="660020, г. Красноярск, ул. Дудинская, 3">660020, г. Красноярск, ул. Дудинская, 3</option>
-            <option value="630088, г. Новосибирск, Северный проезд, 33">630088, г. Новосибирск, Северный проезд, 33</option>
-            <option value="675028, г. Благовещенск, ул. Студенческая, 15">675028, г. Благовещенск, ул. Студенческая, 15</option>
-            <option value="690039, г. Владивосток, ул. Енисейска, 32 ст1">690039, г. Владивосток, ул. Енисейска, 32 ст1</option>
-            <option value="680006, г. Хабаровск, ул. Краснореченская, 72а лит З">680006, г. Хабаровск, ул. Краснореченская, 72а лит З</option>
-        </select>
-        <input type="tel" placeholder="Сотовый телефон (Необязательно)" id="phone_sot">
-        <input type="email" name="" placeholder="Эл.Почта" id="work_mail">
-        <div class="form-not">
-            <h2>Необязательные поля</h2>
-            <textarea name="" id="text-input" cols="30" rows="10" placeholder="Произвольный текст"></textarea>
-            <label for="card_generate">Доп.изображения <input type="file" name="card_generate" id="card_generate" multiple="multiple"></label>
-        </div>
-    </form>
-    <div class="result-block">
-        <div class="result" id="result">
-            <div class="podpis" style="margin: 20px;font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;font-size:17px;font-weight:400">
-                <p class="prev-suv" style="margin:5px 0;padding:0;">С уважением,</p>
-                <P class="fio" style="font-size:17px;font-weight: bold;margin:5px 0;padding:0;">ФИО</P>
-                <P class="suv" style="margin:5px 0;padding:0;"> Должность</P>
-                <P class="nb1" id="tel-p" style="margin:5px 0;padding:0;">раб.тел:</P>
-                <p class="ad1" style="margin:5px 0;padding:0;">адрес: г.Иркутск, улица Розы Люксембург, 182/2</p>
-                <P class="nb2" style="margin:5px 0;padding:0;">почта:</P>
-                <a href="https://kcu.ru" class="nb3" target="_blank">сайт: www.kcu.ru</a>
-                <a href="https://kcu.ru" target="_blank"><img src="" alt="" id="logo" style="display: block;margin-bottom: 20px;width:320px;margin-top: 10px;"/></a>
-                <p id="text" style="margin:5px 0;padding:0;"></p>
-            </div>    
-        </div>
-        <button class="copy" id="copy">Скопировать</button>
-    </div>
-    <script src="./dist/clipboard.min.js"></script>
-    <script src="./base64.js"></script>
-    <script src="./script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Сибинструмент создание подписей</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="./src/clipboard.min.js"></script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
