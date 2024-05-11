@@ -213,4 +213,4 @@ npm build
 
 
 ## Разработчик
-- [Богдан Звягинцев](tg://resolve?domain=bzvyagintsev) — Front-End Engineer
+- Савицкий Тимофей Валерьевич
